@@ -1,0 +1,38 @@
+body {
+    background-color: hsl(0, 0%, 83%);
+}
+
+.box {
+    width: 55%;
+    padding: 50px;
+    margin: 10px;
+    position: fixed;
+    left: 0%;
+    background-color: white;
+}
+
+.butt {
+    width: 100%;
+    border-radius: 5px;
+    color: white;
+    background-color: Blue;
+}
+
+.text {
+    font-size: 120%;
+    position: fixed;
+    top: 15%;
+    left: 76%;
+}
+
+.card {
+    width: 30%;
+    height: 40%;
+    position: absolute;
+    top: 25%;
+    left: 65%;
+    padding: 80px;
+    background-image: url(https://cdn.discordapp.com/attachments/453839372169641985/1013453737337049140/received_3250365121886948.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+}

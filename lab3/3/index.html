@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<script>
+    let count = 0;
+    function rotate() {
+        count++;
+        if (count % 4 == 1) {
+            document.getElementById('image1').src = "http://10.0.15.20/312lab3/images/3.png";
+            document.getElementById('image2').src = "http://10.0.15.20/312lab3/images/1.png";
+            document.getElementById('image3').src = "http://10.0.15.20/312lab3/images/4.png";
+            document.getElementById('image4').src = "http://10.0.15.20/312lab3/images/2.png";
+        }
+        else if (count % 4 == 2) {
+            document.getElementById('image1').src = "http://10.0.15.20/312lab3/images/4.png";
+            document.getElementById('image2').src = "http://10.0.15.20/312lab3/images/3.png";
+            document.getElementById('image3').src = "http://10.0.15.20/312lab3/images/2.png";
+            document.getElementById('image4').src = "http://10.0.15.20/312lab3/images/1.png";
+        }
+        else if (count % 4 == 3) {
+            document.getElementById('image1').src = "http://10.0.15.20/312lab3/images/2.png";
+            document.getElementById('image2').src = "http://10.0.15.20/312lab3/images/4.png";
+            document.getElementById('image3').src = "http://10.0.15.20/312lab3/images/1.png";
+            document.getElementById('image4').src = "http://10.0.15.20/312lab3/images/3.png";
+        }
+        else if (count % 4 == 0) {
+            document.getElementById('image1').src = "http://10.0.15.20/312lab3/images/1.png";
+            document.getElementById('image2').src = "http://10.0.15.20/312lab3/images/2.png";
+            document.getElementById('image3').src = "http://10.0.15.20/312lab3/images/3.png";
+            document.getElementById('image4').src = "http://10.0.15.20/312lab3/images/4.png";
+        }
+    };
+</script>
+
+<body>
+    <div>
+        <img id="image1" src="http://10.0.15.20/312lab3/images/1.png">
+        <img id="image2" src="http://10.0.15.20/312lab3/images/2.png">
+    </div>
+    <div>
+        <img id="image3" src="http://10.0.15.20/312lab3/images/3.png">
+        <img id="image4" src="http://10.0.15.20/312lab3/images/4.png">
+    </div>
+
+    <button onclick="rotate()">rotate</button>
+</body>
+
+</html>
