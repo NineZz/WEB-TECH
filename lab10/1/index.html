@@ -1,0 +1,59 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: 'Comfortaa', cursive;
+        }
+        .box {
+            padding: 10px;
+            margin: 10px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <form id="formname" class="box">
+        <label for="text"><b>Destination</b>:</label>
+        <input type="text" id="place" value="Suvarnabhumi Airport" />
+        <button type="button" onclick="initPlace()">ไปยังจุดหมาย</button>
+    </form>
+    <form id="formnumber" class="box">
+        <label for="text"><b>Latitude</b>:</label>
+        <input type="text" id="latitude" value="13.730828" />
+        <label for="text"><b>Longitude</b>:</label>
+        <input type="text" id="longitude" value="100.7811935" />
+        <button type="submit" onclick="initMap()">ไปยังจุดหมาย</button>
+    </form>
+
+    <iframe id="map" width="100%" height="500" src="https://maps.google.com/maps?q=&t=&z=15&ie=UTF8&iwloc=&output=embed"
+        frameborder="0" allowfullscreen>
+    </iframe>
+
+    <script>
+        const namePlace = document.getElementById("formname");
+        const numberPlace = document.getElementById("formnumber");
+
+        function initMap() {
+            document.getElementById('map').src = 'https://maps.google.com/maps?q=' + numberPlace.latitude.value + ', ' + numberPlace.longitude.value + '&t=&z=15&ie=UTF8&iwloc=&output=embed';
+        }
+
+        function initPlace() {
+            document.getElementById('map').src = 'https://maps.google.com/maps?q=' + namePlace.place.value + '&t=&z=15&ie=UTF8&iwloc=&output=embed';
+        }
+    </script>
+
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWevQxGAwyvcni6FhqnYVUYnI2xs9_onk&callback=initMap">
+        </script>
+</body>
+
+</html>
