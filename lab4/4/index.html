@@ -1,0 +1,54 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table, th, td {
+            border: 0;
+            margin-top: 20;
+            padding: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <input id="numb" type="number">:
+    <button id="summit" button onclick="createChess()">Submit</button>
+    <table id="table" cellspacing="0"></table>
+
+    <script>
+        function createChess() {
+            let num = document.getElementById("numb").value;
+            let chesstable = document.getElementById("table");
+            chesstable.innerHTML = "";
+            let newline = chesstable.insertRow();
+
+            for (let index = 0; index < num; index++) {
+                let tab = document.getElementById("table");
+                let cell = document.createElement("div");
+                cell.style.margin = "0px";
+                cell.style.width = "70px";
+                cell.style.height = "70px";
+                cell.style.border = "1px solid black";
+                if (index % 9 == 0) {
+                    newline = chesstable.insertRow();
+                    index++;
+                    num++;
+                }
+                let col = newline.insertCell();
+                if (index % 2 == 0) {
+                    cell.style.backgroundColor = "black";
+                }
+                else {
+                    cell.style.backgroundColor = "white";
+                }
+                col.appendChild(cell);
+            }
+        }
+    </script>
+
+</body>
+
+</html>

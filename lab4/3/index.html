@@ -1,0 +1,40 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js"></script>
+    <title>Document</title>
+    <style>
+        hr {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        th {
+            padding: 10px;
+            background-color: lightgray;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>ลงทะเบียนร่วมงาน</h1>
+    <div>
+        <input type="text" id="stuid" placeholder="รหัสนักศึกษา">
+        <input type="text" id="fname" placeholder="ชื่อ">
+        <input type="text" id="lname" placeholder="นามสกุล">
+        <button onclick="register()">ลงทะเบียน</button>
+    </div>
+    <hr>
+    <table id="table">
+        <tr>
+            <th>ลำดับที่</th>
+            <th>รหัสนักศึกษา</th>
+            <th>ชื่อ</th>
+            <th>นามสกุล</th>
+        </tr>
+    </table>
+</body>
+
+</html>

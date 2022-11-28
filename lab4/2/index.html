@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <label for="name" id="fname">ชื่อ:</label>
+        <input type="text" id="name">
+    </div>
+    <div>
+        <label for="lastname" id="lname">นามสกุล:</label>
+        <input type="text" id="lastname">
+    </div>
+    <div>
+        <label for="country" id="coun">ประเทศ:</label>
+        <select id="country">
+            <option value="" selected id="0">เลือกประเทศ</option>
+            <option id="1">ไทย</option>
+            <option id="2">เวียดนาม</option>
+            <option id="3">ลาว</option>
+            <option id="4">มาเลย์เซีย</option>
+            <option id="5">สิงคโปร์</option>
+            <option id="6">ฟิลิปปินส์</option>
+            <option id="7">เมียนมาร์</option>
+            <option id="8">กัมพูชา</option>
+            <option id="9">บรูไน</option>
+        </select>
+    </div>
+    <br>
+        <button onclick="change()" id="butt">เปลี่ยนเป็นภาษาอังกฤษ</button>
+</body>
+</html>
