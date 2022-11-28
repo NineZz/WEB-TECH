@@ -1,0 +1,25 @@
+body {
+    font-family: 'Cairo', sans-serif;
+}
+
+table {
+    width: 45%;
+    height: 45%;
+    font-size: 24px;
+    border-collapse: collapse;
+}
+
+tr,th {
+    border: 1pt solid lightgrey;
+}
+
+.center {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.Orange {
+    color: orange;
+}

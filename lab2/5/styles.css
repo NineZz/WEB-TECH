@@ -1,0 +1,20 @@
+body {
+    font-family: 'Prompt', sans-serif;
+}
+
+.box {
+    height: 350px;
+    width: 300px;
+    border: 10px solid lightgrey;
+    float: left;
+    padding-left: 10px;
+    overflow: auto;
+}
+
+.center {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+}
